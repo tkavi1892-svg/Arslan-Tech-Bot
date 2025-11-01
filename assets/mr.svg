@@ -112,7 +112,7 @@
 
   <!-- Enhanced center text with glow -->
   <text x="300" y="215" text-anchor="middle" font-size="52" font-weight="bold" font-family="Segoe UI, Verdana, sans-serif" fill="url(#rainbow)" filter="url(#glow)">
-    SMD
+    A-T-B
     <animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="3s" repeatCount="indefinite"/>
   </text>
