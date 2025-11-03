@@ -90,17 +90,19 @@ async function songCommand(sock, chatId, message) {
 
 		// 🎧 Show full metadata before download
 		const infoMessage = `
-╭━『 🎧 *_SONG DETAILS_* 🎶 』━╮
+╭═✦〔 🎧 *_SONG DETAILS_* 🎶 〕✦═╮
 * 🎵 *Title:* ${video.title || 'Unknown'}
 * 👁 *Views:* ${video.views?.toLocaleString?.() || 'N/A'}
 * 👍 *Likes:* ${likes}
 * 📺 *Channel:* ${video.author?.name || 'Unknown'}
 * ⏱ *Duration:* ${video.timestamp || 'N/A'}
-╰━━━━━━━━━━━━━━━━━╯
+╰═✪═════════════✪═╯
+│
 ╭━『 📝 *_DISCRIPTION_* 📝 』━╮
-${video.description ? video.description.slice(0, 400) + (video.description.length > 400 ? '...' : '') : 'No description available.'}
-╰━━━━━━━━━━━━━━━━━╯
-> ⏳ *𝙋𝙊𝙒𝙀𝙍𝙀𝘿 𝘽𝙔 𝘼𝙍𝙎𝙇𝘼𝙉 𝙏𝙀𝘾𝙃* 🔥
+* ${video.description ? video.description.slice(0, 400) + (video.description.length > 400 ? '...' : '') : 'No description available.'}
+╰═✪═════════════✪═╯
+│
+> ⏳ *𝙋𝙊𝙒𝙀𝙍𝙀𝘿 𝘽𝙔 𝘼𝙍𝙎𝙇𝘼𝙉 𝙏𝙀𝘾𝙃* 
 `;
 
 		await sock.sendMessage(chatId, {
