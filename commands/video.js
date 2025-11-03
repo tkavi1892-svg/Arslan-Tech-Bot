@@ -76,7 +76,7 @@ async function videoCommand(sock, chatId, message) {
 
         await sock.sendMessage(chatId, {
             image: { url: thumb },
-            caption: `🎬 *${title}*\n\n╭═✦〔 *_VIDEO-DOWNLOADING_* 〕✦═╮\n⏱ Duration: *${duration}*\n👁 Views: *${views}*\n👤 Channel: *${author}*\n╰═✪═════════════✪═╯\n\n📥 Downloading your video...`
+            caption: `🎬 *${title}*\n\n╭═✦〔 *_VIDEO-DOWNLOADING_* 〕✦═╮\n* ⏱ Duration: *${duration}*\n* 👁 Views: *${views}*\n* 👤 Channel: *${author}*\n╰═✪═════════════✪═╯\n\n> 📥 Downloading your video...`
         }, { quoted: message });
 
         let videoData;
@@ -90,7 +90,7 @@ async function videoCommand(sock, chatId, message) {
             video: { url: videoData.download },
             mimetype: 'video/mp4',
             fileName: `${videoData.title || title}.mp4`,
-            caption: `🎬 *${videoData.title || title}*\n\n╭═✦〔 *_VIDEO-DOWNLOADED_* 〕✦═╮\n⏱ *Duration:* ${duration}\n👁 *Views:* ${views}\n👤 *Channel:* ${author}\n╰═✪═════════════✪═╯\n\n> ⚡ *Powered by ArslanMD Official*`
+            caption: `🎬 *${videoData.title || title}*\n\n╭═✦〔 *_VIDEO-DOWNLOADED_* 〕✦═╮\n* ⏱ *Duration:* ${duration}\n* 👁 *Views:* ${views}\n* 👤 *Channel:* ${author}\n╰═✪═════════════✪═╯\n\n> ⚡ *Powered by ArslanMD Official*`
         }, { quoted: message });
 
     } catch (error) {
